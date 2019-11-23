@@ -14,7 +14,7 @@ find $current_dir -name "*.*" | while read f ; do
 	# Check if file extention is jpg or png
 	if [[ ${f: -4} == ".jpg" || ${f: -4} == ".png" ]]; then
 		# Rename files by replacing spaces with underscores
-		mv -- "$f" "${f// /_}"
+		# mv -- "$f" "${f// /_}"
 
 		# Print the information
 		# echo file name: $(basename "${f%.*}") --- file type: "${f##*.}" --- DPI: $(exiftool -b "${f}" -XResolution), $(exiftool -b "${f}" -YResolution)
